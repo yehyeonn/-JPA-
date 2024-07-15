@@ -1,0 +1,12 @@
+<!-- 성공하면 디테일 , 실패하면 업데이트(GET) -->
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<script th:unless="${result > 0}">
+    alert("수정실패");
+    history.back();
+</script>
+<script th:if="${result > 0}">
+    alert("수정 성공");
+    location.href = "detail/[[${post.id}]]";
+</script>
+</html>
