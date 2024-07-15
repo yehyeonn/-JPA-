@@ -17,7 +17,7 @@ import java.io.IOException;
 public class U {
 
     // 현재 로그인 한 사용자 User
-    public static User getLoggeduser(){
+    public static User getLoggedUser(){
         PrincipalDetails userDetails = (PrincipalDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();  // userDetail 꺼내기, 로그인 상태가 아니라면 에러가 남(Authentication이 널이라).
         User user = userDetails.getUser();
         return user;
